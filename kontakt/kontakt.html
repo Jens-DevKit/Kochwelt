@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kochwelt</title>
+  <link rel="stylesheet" href="../start/header.css">
+  <link rel="stylesheet" href="./kontakt.css">
+  <link rel="stylesheet" href="../start/footer.css">
+  <link rel="stylesheet" href="../start/basis.css">
+  <link rel="icon" type="image/vnd.icon" href="../img/logo_small.png">
+  <script>
+    function toggleRespMenu() {
+      document
+        .getElementById("resp-menu")
+        .classList.toggle("resp-menu-closed");
+    }
+
+    function sendMail(event) {
+      event.preventDefault();
+      const data = new FormData(event.target);
+
+      fetch("https://formspree.io/f/mdknwevr", {
+        method: "POST",
+        body: new FormData(event.target),
+        headers: {
+          Accept: "application/json",
+        },
+      })
+        .then(() => {
+          window.location.href ="../kontakt/send_mail.html";
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="max-width content">
+        <div>
+          <a href="../start/kochwelt.html"><img class="header-logo" src="../img/logo.png" alt=""></a>
+        </div>
+        <div id="resp-menu" class="link-div resp-menu-closed">
+          <a class="link" href="../start/kochwelt.html">Start</a>
+          <a class="link" href="../rezept/RezeptdesTages.html">Rezept des Tages</a>
+          <a class="link" href="../kontakt/kontakt.html">Kontakt</a>
+          <a class="link" href="../impressum/impressum.html">Impressum</a>
+        </div>
+        <div onclick="toggleRespMenu()"class="header-burger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </header>
+      <div class="max-width" style="height: 87vh;">
+        <form onsubmit="sendMail(event)"
+        action="https://formspree.io/f/mdknwevr"
+        method="POST"
+        >
+          <h2>Kontaktiere uns</h2>
+          <label>
+            Deine Email:
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Deine Name:
+            <input type="text" name="Name" required>
+          </label>
+          <label>
+            Deine Nachricht:
+            <textarea name="message" required></textarea>
+          </label>
+          <button type="submit" onclick="on()">Send</button>
+        </form>
+      </div>
+      <footer>
+        <div class="max-width footercontent">
+          <img class="footer-logo" src="../img/logo_white.png">
+            <a class="footer-link" href="../datenschutz/datenschutz.html" target="_blank">Datenschutz</a>
+            <a class="footer-link" href="../impressum/impressum.html">Impressum</a>
+            <div class="logo-collection">
+              <a href="https://x.com/?lang=de"><img class="logo" src="../img/twitter_logo.png"></a>
+              <a href="https://www.facebook.com/?locale=de_DE"><img class="logo" src="../img/facebook_logo.png"></a>
+              <a href="https://www.instagram.com/"><img class="logo" src="../img/instagram_logo.jpg"></a>
+            </div>
+        </div>      
+      </footer>
+  </div>
+</body>
+</html>

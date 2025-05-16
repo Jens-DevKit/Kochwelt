@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kochwelt</title>
+    <link rel="stylesheet" href="../start/header.css" />
+    <link rel="stylesheet" href="../start/footer.css" />
+    <link rel="stylesheet" href="../rezept/rezept.css" />
+    <link rel="stylesheet" href="../start/basis.css" />
+    <link rel="icon" type="image/vnd.icon" href="../img/logo_small.png" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="max-width content">
+          <div>
+            <a href="../start/kochwelt.html"><img class="header-logo" src="../img/logo.png" alt=""></a>
+          </div>
+          <div id="resp-menu" class="link-div resp-menu-closed">
+            <a class="link" href="../start/kochwelt.html">Start</a>
+            <a class="link" href="../rezept/RezeptdesTages.html">Rezept des Tages</a>
+            <a class="link" href="../kontakt/kontakt.html">Kontakt</a>
+            <a class="link" href="../impressum/impressum.html">Impressum</a>
+          </div>
+          <div onclick="toggleRespMenu()"class="header-burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+      </header>
+      <div class="recipe-upper-section max-width">
+        <h1>Ungarische Fischsuppe</h1>
+        <img class="recipe-foto" src="../img/halaszle.jpg" alt="" />
+        <div class="recipe-upper-section-typical">
+          <div class="recipe-typical">
+            <img
+              class="rezept-logo"
+              src="../img/icons/clock-regular.svg"
+              alt=""
+            />
+            <p>1,25 h</p>
+          </div>
+          <div class="recipe-typical">
+            <img
+              class="rezept-logo"
+              src="../img/icons/brain-solid.svg"
+              alt=""
+            />
+            <p>easy</p>
+          </div>
+          <div class="recipe-typical">
+            <img
+              class="rezept-logo"
+              src="../img/icons/calendar-alt-regular.svg"
+              alt=""
+            />
+            <p>09.08.2024</p>
+          </div>
+        </div>
+      </div>
+      <div class="zutaten-mänge max-width">
+        <form action="">
+          <label for="portion-menge">Zutaten für:</label>
+          <input
+            type="number"
+            value="1"
+            min="1"
+            max="14"
+            step="1"
+            id="portion-menge"
+            required
+          />
+          <button type="button" onclick="calculatePortion()">Portion</button>
+        </form>
+
+        <p id="fehlermeldung" style="color: red"></p>
+        <table>
+          <tr>
+            <td class="zutat" data-base-amount="1" data-unit="Kg">1 Kg</td>
+            <td>Karpfen</td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="1.5" data-unit="L">1,5 L</td>
+            <td>Wasser</td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="1" data-unit="mittlere">1 mittlere</td>
+            <td>Zwiebel</td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="1" data-unit="EL">1 EL</td>
+            <td>rote Paprika Pulver</td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="" data-unit=""></td>
+            <td>Salz (nach Belieben)</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="recipe-description max-width">
+        <h2>Zubereitung</h2>
+        <div class="vorbereitung-zeit">
+          <div class="recipe-typical">
+            <img class="rezept-logo" src="../img/icons/clock-regular.svg" />
+            <p>Vorbereitung ca. 15 Min</p>
+          </div>
+          <div class="recipe-typical">
+            <img class="rezept-logo" src="../img/icons/clock-regular.svg" />
+            <p>Kochzeit ca. 50 Min</p>
+          </div>
+        </div>
+        <main>
+          Die klein geschnittene Zwiebel mit dem gepuzte und in Hufeisen
+          geschnittene Fisch Teile mit dem Wasser in den Kochkessel aufhängen.
+          Unter dem Kochkessel legen wir vom trockenen Holz Feuer, das Feuer
+          muss immer groß sein, dass wir intensiev die Suppe kochen können. Wenn
+          wir spüren bzw. sehen, dass die Suppe anfangt zum sprudeln dann geben
+          wir das Paprikapulver in die Suppe rein. Wie vorher erwähnt habe, das
+          Feuer muss immer lichterloh brennen. 30 Minuten nach sprudeln, legen
+          wir den Fischlaich und Fischmilch in die Suppe. Nach dem brauchen wir
+          noch ca. 20 Minuten und unsere Suppe ist fertig und nicht vergessen
+          wie bischer lichterloh brennende Feuer. Neben bei sollen wir die
+          traditionelle Zündholznudel kochen. Wenn beide fertig sind, brauchen
+          wir nur einen tiefen Schüssel oder Teller und können wir unsere
+          leckeren Fischsuppe geniesen.
+        </main>
+      </div>
+
+      <div class="profil max-width">
+        <img class="profil-foto" src="../img/selfi.jpg" alt="" />
+        <p>Klaus Christoph Dozsa</p>
+      </div>
+      <footer>
+        <div class="max-width footercontent">
+          <img class="footer-logo" src="../img/logo_white.png">
+            <a class="footer-link" href="../datenschutz/datenschutz.html" target="_blank">Datenschutz</a>
+            <a class="footer-link" href="../impressum/impressum.html">Impressum</a>
+            <div class="logo-collection">
+              <a href="https://x.com/?lang=de"><img class="logo" src="../img/twitter_logo.png"></a>
+              <a href="https://www.facebook.com/?locale=de_DE"><img class="logo" src="../img/facebook_logo.png"></a>
+              <a href="https://www.instagram.com/"><img class="logo" src="../img/instagram_logo.jpg"></a>
+            </div>
+        </div>      
+      </footer>
+    </div>
+  </body>
+</html>

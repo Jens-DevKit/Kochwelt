@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kochwelt</title>
+    <link rel="stylesheet" href="../start/header.css" />
+    <link rel="stylesheet" href="../start/footer.css" />
+    <link rel="stylesheet" href="../rezept/rezept.css" />
+    <link rel="stylesheet" href="../start/basis.css" />
+    <link rel="icon" type="image/vnd.icon" href="../img/logo_small.png" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="max-width content">
+          <div>
+            <a href="../start/kochwelt.html"><img class="header-logo" src="../img/logo.png" alt=""></a>
+          </div>
+          <div id="resp-menu" class="link-div resp-menu-closed">
+            <a class="link" href="../start/kochwelt.html">Start</a>
+            <a class="link" href="../rezept/RezeptdesTages.html">Rezept des Tages</a>
+            <a class="link" href="../kontakt/kontakt.html">Kontakt</a>
+            <a class="link" href="../impressum/impressum.html">Impressum</a>
+          </div>
+          <div onclick="toggleRespMenu()"class="header-burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+      </header>
+      <div class="recipe-upper-section max-width">
+        <h1>Spaghetti mit Fleischbällchen</h1>
+        <img class="recipe-foto" src="../img/spaghetti.jpg" alt="" />
+        <div class="recipe-upper-section-typical">
+          <div class="recipe-typical">
+            <img
+              class="rezept-logo"
+              src="../img/icons/clock-regular.svg"
+              alt=""
+            />
+            <p>90 Min</p>
+          </div>
+          <div class="recipe-typical">
+            <img
+              class="rezept-logo"
+              src="../img/icons/brain-solid.svg"
+              alt=""
+            />
+            <p>Mittel</p>
+          </div>
+          <div class="recipe-typical">
+            <img
+              class="rezept-logo"
+              src="../img/icons/calendar-alt-regular.svg"
+              alt=""
+            />
+            <p>11.08.2024</p>
+          </div>
+        </div>
+      </div>
+      <div class="zutaten-mänge max-width">
+        <form action="">
+          <label for="portion-menge">Zutaten für:</label>
+          <input
+            type="number"
+            value="1"
+            min="1"
+            max="14"
+            step="1"
+            id="portion-menge"
+            required
+          />
+          <button type="button" onclick="calculatePortion()">Portion</button>
+        </form>
+
+        <p id="fehlermeldung" style="color: red"></p>
+        
+        
+        <table>
+          <tr>
+            <td class="zutat" data-base-amount="80" data-unit="g">80 g </td>
+            <td>Pasta</td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="100" data-unit="g">
+              100 g <td>Rinderhackfleisch</td>
+            </td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="1" data-unit="Stück">
+              1 EL <td>Paniermehl</td>
+            </td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="1" data-unit="Stück">
+              1 Stück  <td>Eier</td>
+            </td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="1" data-unit="Stück">
+              1 Stück  <td>Zwiebeln</td>
+            </td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="1" data-unit="Stück">
+              1 Stück <td>Knoblauch</td>
+            </td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="1" data-unit="EL">
+              1 EL <td>Olivenöl</td>
+            </td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="3" data-unit="TL">
+              3 TL <td>Ital. Kräuter</td>
+            </td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="400" data-unit="ml">
+              400ml <td>Passierte Tomaten</td>
+            </td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="" data-unit="">
+               <td>Salz, Pfeffer (nach Belieben)</td>
+            </td>
+          </tr>
+        </table>
+        
+      </div>
+
+      <div class="recipe-description max-width">
+        <h2>Zubereitung</h2>
+        <div class="vorbereitung-zeit">
+          <div class="recipe-typical">
+            <img class="rezept-logo" src="../img/icons/clock-regular.svg" />
+            <p>Vorbereitung ca. 30 Min</p>
+          </div>
+          <div class="recipe-typical">
+            <img class="rezept-logo" src="../img/icons/clock-regular.svg" />
+            <p>Kochzeit ca. 90 Min</p>
+          </div>
+        </div>
+        <main>
+          <ol>
+            <li>
+              Die Spaghetti nach Packungsanweisung in reichlich Salzwasser al
+              dente kochen. Abgießen und warm halten.
+            </li>
+            <li>
+              In einer großen Schüssel das Hackfleisch mit Zwiebel, Knoblauch,
+              Ei, Paniermehl, Paprikapulver, und Oregano vermengen. Mit Salz und
+              Pfeffer würzen.
+            </li>
+            <li>Aus der Mischung kleine Fleischbällchen formen.</li>
+            <li>
+              In einer Pfanne etwas Olivenöl erhitzen und die Fleischbällchen
+              darin rundherum anbraten, bis sie gut durchgegart und goldbraun
+              sind. Herausnehmen und beiseite stellen.
+            </li>
+            <li>
+              Im gleichen Öl das Tomatenmark anbraten, dann die Tomatenstücke
+              hinzufügen. Mit Salz, Pfeffer und weiteren Kräutern abschmecken.
+            </li>
+            <li>
+              Die Fleischbällchen in die Tomatensauce geben und bei niedriger
+              Hitze 10 Minuten köcheln lassen.
+            </li>
+            <li>
+              Die gekochten Spaghetti in die Sauce geben oder die Sauce über die
+              Spaghetti servieren.
+            </li>
+            <li>
+              Nach Belieben mit frischem Basilikum oder Parmesan bestreuen und
+              genießen!
+            </li>
+          </ol>
+        </main>
+      </div>
+
+      <div class="profil max-width">
+        <img class="profil-foto" src="../img/jens.jpg" alt="" />
+        <p>Jens Albers</p>
+      </div>
+      <footer>
+        <div class="max-width footercontent">
+          <img class="footer-logo" src="../img/logo_white.png">
+            <a class="footer-link" href="../datenschutz/datenschutz.html" target="_blank">Datenschutz</a>
+            <a class="footer-link" href="../impressum/impressum.html">Impressum</a>
+            <div class="logo-collection">
+              <a href="https://x.com/?lang=de"><img class="logo" src="../img/twitter_logo.png"></a>
+              <a href="https://www.facebook.com/?locale=de_DE"><img class="logo" src="../img/facebook_logo.png"></a>
+              <a href="https://www.instagram.com/"><img class="logo" src="../img/instagram_logo.jpg"></a>
+            </div>
+        </div>      
+      </footer>
+    </div>
+  </body>
+</html>

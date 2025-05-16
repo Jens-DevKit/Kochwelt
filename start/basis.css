@@ -1,0 +1,31 @@
+
+.max-width{
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+body{
+  font-family: "Raleway", sans-serif;
+}
+.wrapper{
+  position: relative;
+  overflow-x: hidden;
+}
+button {
+  background-color: #008000;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+  min-width: 150px;
+  margin-top: 10px;
+}
+button:hover{
+  cursor: pointer;
+  background-color: #008000b5;
+  border-radius: 10px;
+}
+
+.impressum-div{
+  height: 1000px;
+}

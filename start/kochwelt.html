@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kochwelt</title>
+  <link rel="stylesheet" href="../start/header.css">
+  <link rel="stylesheet" href="../start/kochwelt.css">
+  <link rel="stylesheet" href="../start/footer.css">
+  <link rel="stylesheet" href="../rezept/rezept.css">
+  <link rel="stylesheet" href="../start/basis.css">
+  <link rel="icon" type="image/vnd.icon" href="../img/logo_small.png">
+  <script>
+    function toggleRespMenu(){
+      document.getElementById('resp-menu').classList.toggle('resp-menu-closed');
+    }
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="max-width content">
+        <div>
+          <a href="../start/kochwelt.html"><img class="header-logo" src="../img/logo.png" alt=""></a>
+        </div>
+        <div id="resp-menu" class="link-div resp-menu-closed">
+          <a class="link" href="../start/kochwelt.html">Start</a>
+          <a class="link" href="../rezept/RezeptdesTages.html">Rezept des Tages</a>
+          <a class="link" href="../kontakt/kontakt.html">Kontakt</a>
+          <a class="link" href="../impressum/impressum.html">Impressum</a>
+        </div>
+        <div onclick="toggleRespMenu()"class="header-burger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </header>
+    <div class="max-width">
+      <section class="mindset">
+        <img class="mindset_img" src="../img/spaghetti.jpg" alt="Kochen ist Kinderleicht">
+        
+      <div class="mindset_text">
+        <h2 class="left">Spaghetti und Fleischbällchen</h2>
+        <span class="mindset_text_span">Leckere Spaghetti mit herzhafter Tomatensauce und pikant gewürzten Fleischbällchen. Mit ein wenig Aufwand bekommen wir ein leckeres Essen für Groß und Klein.</span>
+        <button onclick="window.location.href='../rezept/RezeptdesTages.html';">Rezept öffnen</button>
+      </div>
+    </section>
+  
+    <section class="section3">
+      <h2>Lust auf was Neues?</h2>
+      <div class="rezept_nav">
+        <a class="rezept_link" href="../rezept/Klaus.html"><img class="rezept_img" src="../img/halaszle.jpg" alt=""><h3>Ungarische Fischsuppe</h2></a>
+        <a class="rezept_link" href="../rezept/Miguel.html"><img class="rezept_img" src="../img/cheeseburger.jpeg" alt=""><h3>Schweizer Cheeseburger</h2></a>
+        <a class="rezept_link" href="../rezept/Jens.html"><img class="rezept_img" src="../img/Schweinebraten.jpg" alt=""><h3>Schweinebraten mit Ofenkartoffeln</h2></a>
+      </div>
+    </section>
+  
+    <section class="third-part">
+      <h2>Gas, Strom oder Holz? Was ist besser?</h2>
+       
+      <div class="third-part-description">
+        <p>Dieses Dilemma reicht Jahrzehnte zurück. In letzter Zeit genießen Cerankochfelder einen großen Vorteil, besonders in Westeuropa. In Osteuropa sind Gaskochgeräte noch verbreitet, 
+           und in einigen wenigen Haushalten findet man noch holzbefeuerte Sparherde. Trotz Modernisierung bleibt das Kochen mit Holz eine alte Tradition. Ein Beispiel dafür ist die ungarische Fischsuppe, die zwar auf einem E-Herd gekocht werden kann, aber im Kochkessel, am besten mit Holz, ihren besonderen Geschmack erhält. Obwohl es aufwändiger ist, lohnt sich das Kochen mit Holz wegen des besseren Geschmacks.</p>
+        <img class="description-foto" src="../img/Holzofen.jpg" alt="Kochfeld">
+      </div>
+    </section>
+    </div>
+    <footer>
+      <div class="max-width footercontent">
+        <img class="footer-logo" src="../img/logo_white.png">
+          <a class="footer-link" href="../datenschutz/datenschutz.html" target="_blank">Datenschutz</a>
+          <a class="footer-link" href="../impressum/impressum.html">Impressum</a>
+          <div class="logo-collection">
+            <a href="https://x.com/?lang=de"><img class="logo" src="../img/twitter_logo.png"></a>
+            <a href="https://www.facebook.com/?locale=de_DE"><img class="logo" src="../img/facebook_logo.png"></a>
+            <a href="https://www.instagram.com/"><img class="logo" src="../img/instagram_logo.jpg"></a>
+          </div>
+      </div>      
+    </footer>
+  </div>
+</body>
+</html>

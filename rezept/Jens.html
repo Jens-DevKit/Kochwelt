@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kochwelt</title>
+    <link rel="stylesheet" href="../start/header.css" />
+    <link rel="stylesheet" href="../start/footer.css" />
+    <link rel="stylesheet" href="../rezept/rezept.css" />
+    <link rel="stylesheet" href="../start/basis.css" />
+    <link rel="icon" type="image/vnd.icon" href="../img/logo_small.png" />
+    <script src="script.js"></script>
+    
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="max-width content">
+          <div>
+            <a href="../start/kochwelt.html"><img class="header-logo" src="../img/logo.png" alt=""></a>
+          </div>
+          <div id="resp-menu" class="link-div resp-menu-closed">
+            <a class="link" href="../start/kochwelt.html">Start</a>
+            <a class="link" href="../rezept/RezeptdesTages.html">Rezept des Tages</a>
+            <a class="link" href="../kontakt/kontakt.html">Kontakt</a>
+            <a class="link" href="../impressum/impressum.html">Impressum</a>
+          </div>
+          <div onclick="toggleRespMenu()"class="header-burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+      </header>
+      <div class="recipe-upper-section max-width">
+        <h1>Schweinebraten mit Ofenkartoffeln</h1>
+        <img class="recipe-foto" src="../img/Schweinebraten.jpg" alt="" />
+        <div class="recipe-upper-section-typical">
+          <div class="recipe-typical">
+            <img
+              class="rezept-logo"
+              src="../img/icons/clock-regular.svg"
+              alt=""
+            />
+            <p>90 Min</p>
+          </div>
+          <div class="recipe-typical">
+            <img
+              class="rezept-logo"
+              src="../img/icons/brain-solid.svg"
+              alt=""
+            />
+            <p>Mittel</p>
+          </div>
+          <div class="recipe-typical">
+            <img
+              class="rezept-logo"
+              src="../img/icons/calendar-alt-regular.svg"
+              alt=""
+            />
+            <p>11.08.2024</p>
+          </div>
+        </div>
+      </div>
+      <div class="zutaten-mänge max-width">
+        <form action="">
+          <label for="portion-menge">Zutaten für:</label>
+          <input
+            type="number"
+            value="1"
+            min="1"
+            max="14"
+            step="1"
+            id="portion-menge"
+            required
+          />
+          <button type="button" onclick="calculatePortion()">Portion</button>
+        </form>
+
+        <p id="fehlermeldung" style="color: red"></p>
+        <table>
+          <tr>
+            <td class="zutat" data-base-amount="0.5" data-unit="kg">0,5 kg</td>
+            <td>Schweinebraten</td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="1" data-unit="EL">
+              1 EL  <td>Olivenöl</td>
+            </td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="1" data-unit="Stück">
+              1 Stück <td>Knoblauchzehe</td>
+            </td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="1" data-unit="Stück">
+              1 Stück  <td>Lorbeerblatt</td>
+            </td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="50" data-unit="ml">
+              50 ml  <td>Brühe</td>
+            </td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="180" data-unit="g">
+              180 g  <td>Kartoffeln</td>
+            </td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="0.5" data-unit="EL">
+              0,5 Löffel  <td>Senf (mittelscharf)</td>
+            </td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="1" data-unit="Stück">
+              1  <td>Piment und Wacholderbeere</td>
+            </td>
+          </tr>
+          <tr>
+            <td class="zutat" data-base-amount="" data-unit="">
+               <td>Salz, Pfeffer (nach Belieben)</td>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="recipe-description max-width">
+        <h2>Zubereitung</h2>
+        <div class="vorbereitung-zeit">
+          <div class="recipe-typical">
+            <img class="rezept-logo" src="../img/icons/clock-regular.svg" />
+            <p>Vorbereitung ca. 15 Min</p>
+          </div>
+          <div class="recipe-typical">
+            <img class="rezept-logo" src="../img/icons/clock-regular.svg" />
+            <p>Kochzeit ca. 50 Min</p>
+          </div>
+        </div>
+        <main>
+          <ol>
+            <li>
+              Am Vortag: Fleisch waschen, trockentupfen, die Schwarte mit einem
+              scharfen Messer einschneiden. Fleisch in einer Schüssel mit dem Öl
+              übergießen. Knoblauch schälen und in Scheiben schneiden,
+              Lorbeerblätter etwas zerbröseln. Beides zu der Ölmarinade geben.
+              Fleisch über Nacht zugedeckt marinieren.
+            </li>
+            <li>
+              Am nächsten Tag: Ofen auf 175 Grad vorheitzen. Fleisch aus der
+              Marinade nehmen, kräftig mit Salz und Pfeffer einreiben. 3 EL der
+              Marinade (ohne Knoblauch und Lorbeer) in einem Bräter erhitzen,
+              Fleisch darin rundum anbraten. 100 ml Brühe angießen und im Ofen
+              50-60 Minuten garen. Dabei ab und zu mit Garflüssigkeit begießen.
+            </li>
+            <li>
+              Inzwischen Kartoffeln schälen, waschen und klein schneiden. Nach
+              15 Minuten Garzeit Kartoffeln zum Fleisch geben, leicht salzen.
+              Übriges Öl samt Knoblauch und Lorbeer darüber geben. Fleisch
+              zwischendurch wenden und fertig garen.
+            </li>
+            <li>
+              Inzwischen Kartoffeln schälen, waschen und klein schneiden. Nach
+              15 Minuten Garzeit Kartoffeln zum Fleisch geben, leicht salzen.
+              Übriges Öl samt Knoblauch und Lorbeer darüber geben. Fleisch
+              zwischendurch wenden und fertig garen.
+            </li>
+          </ol>
+        </main>
+      </div>
+
+      <div class="profil max-width">
+        <img class="profil-foto" src="../img/jens.jpg" alt="" />
+        <p>Jens Albers</p>
+      </div>
+      <footer>
+        <div class="max-width footercontent">
+          <img class="footer-logo" src="../img/logo_white.png">
+            <a class="footer-link" href="../datenschutz/datenschutz.html" target="_blank">Datenschutz</a>
+            <a class="footer-link" href="../impressum/impressum.html">Impressum</a>
+            <div class="logo-collection">
+              <a href="https://x.com/?lang=de"><img class="logo" src="../img/twitter_logo.png"></a>
+              <a href="https://www.facebook.com/?locale=de_DE"><img class="logo" src="../img/facebook_logo.png"></a>
+              <a href="https://www.instagram.com/"><img class="logo" src="../img/instagram_logo.jpg"></a>
+            </div>
+        </div>      
+      </footer>
+    </div>
+  </body>
+</html>

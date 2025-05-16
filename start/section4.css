@@ -1,0 +1,44 @@
+
+
+.third-part {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.third-part-description {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.description-foto{
+  height: 270px;
+  aspect-ratio: 1 / 1;
+}
+
+p{
+  font-size: 20px;
+}
+
+@media(max-width: 820px){
+  .description-foto{
+    height: 200px;
+    aspect-ratio: 1 / 1;
+  }
+
+  .third-part-description,
+  .mindset{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  p{
+    font-size: 16px;
+  }
+}
